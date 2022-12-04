@@ -11,7 +11,7 @@ from sklearn.model_selection import train_test_split
 #helper function
 def get_image(upload_file):
     st.image(Image.open(upload_file))
-    img_array = np.array(Image.open(upload_file).convert('L').resize((150, 150))).reshape(1, 150*150)
+    img_array = np.array(Image.open(upload_file).convert('L').resize((300, 256))).reshape(1, 300*256)
     return img_array
 
 def get_image_type(model, uploaded_file):
@@ -34,19 +34,13 @@ c1, c2, c3 = st.columns([1, 6, 1])
 with c2:
     st.title("Cat Breed Image Classifier")
     upload_file = st.file_uploader("")
-    upload_file1 = st.file_uploader("Another image 1")
-    upload_file2 = st.file_uploader("Another image 2")
-    upload_file3 = st.file_uploader("Another image 3")
 
-    if upload_file and upload_file1 and upload_file2 and upload_file3 is not None:
+    if upload_file is not None:
         # ML model
         svm_model = pickle.load(open("svm_model.pkl", "rb"))
 
         # results
         image_type = get_image_type(svm_model, upload_file)
-        image_type1 = get_image_type(svm_model, upload_file1)
-        image_type2 = get_image_type(svm_model, upload_file2)
-        image_type3 = get_image_type(svm_model, upload_file3)
         
         if image_type == "bombay" :
             st.header(f"The cat is a {image_type}")
