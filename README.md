@@ -1,9 +1,43 @@
 # Cat Breed Image Classification
 
-Cat breed classification, because we are cat people and they’re better than dogs
+### *Why Cat Breed Image Classification*
+---
+There are many cat owners who don't know the breed of their own cat. They're several stray, uncared for cats whose breed alre alsso unknown. The goal of this project was to help people know what kind of cat they have. We will usse an image classifier to figure out what breed of cat is in the photo that the user uploads. 
 
-RESOURCES:
+### *Dataset*
+---
+Data found in Kaggle: https://www.kaggle.com/datasets/ma7555/cat-breeds-dataset
 
+Detailed description of data:
+- ID: unique pet identifier number
+- URL: website url of the photo
+- Type: the type of animal (cat)
+- Age: the age of the cat
+- Gender: the cat's gender
+- Size: the size of the photo
+- Coat: cat's coat characteristic (25133 missing values)
+- Breed: cat's breed 
+- Photos: url link to the image of the cat in small, medium, large (has bad url that no longer work)
+- Med-photos: medium sized photos of 1 cat in URL mode
+
+
+### *Project Progress*
+---
+We utilized PCA to do the following: 
+- To perform feature extraction which helps reduce the training data
+- To recreate the cat images
+
+### *Model*
+---
+Utilized Support Vector Machine (SVM) and Convolutional Neural Netowrk (CNN). We received an evaulation of 84% accuracy rate for 3 breeds: bombay, siamese, and tabby. 
+
+### *Cat Breed Image Classification in Action**
+---
+We used Streamlit to create a website application. We utilized pickle library to create a pickle file for our model. We then implemented our model on a file uploader that the user will use, to upload an image of cats. 
+
+
+### *RESOURCES:*
+---
 1. Tensorflow/Keras: 
   - Installing Tensorflow: https://www.tensorflow.org/install/pip
   - https://www.tensorflow.org/guide
@@ -22,15 +56,3 @@ RESOURCES:
   - https://www.youtube.com/watch?v=Fv1cvFEYPwA [Part 4]
   - https://stackabuse.com/image-recognition-in-python-with-tensorflow-and-keras/
   - https://www.geeksforgeeks.org/python-image-classification-using-keras/
-
-4. Projects similar to what we’re doing:
-  - https://www.youtube.com/watch?v=Ku6wkRQIYuc 
-  - https://devpost.com/software/cat-breed-classifier
-  - https://www.youtube.com/watch?v=JnskIHjAxkc
-
-5. Other Projects
-  - https://alexisranyans.wordpress.com/cat-breed-detector/
-  - https://towardsdatascience.com/machine-learning-cats-and-dogs-breeds-classifier-b26a9df45000
-  - https://towardsdatascience.com/which-cat-breed-is-this-a-more-complex-test-case-for-the-cognitive-computing-bce46aa64483
-  - https://data-flair.training/blogs/cats-dogs-classification-deep-learning-project-beginners/
-
