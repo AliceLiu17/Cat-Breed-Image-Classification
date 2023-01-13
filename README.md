@@ -1,10 +1,10 @@
 # Cat Breed Image Classification
 
-### *Why Cat Breed Image Classification*
+### **Why Cat Breed Image Classification**
 ---
 There are many cat owners who don't know the breed of their own cat. They're several stray, uncared for cats whose breed alre alsso unknown. The goal of this project was to help people know what kind of cat they have. We will usse an image classifier to figure out what breed of cat is in the photo that the user uploads. 
 
-### *Dataset*
+### **Dataset**
 ---
 Data found in Kaggle: https://www.kaggle.com/datasets/ma7555/cat-breeds-dataset
 
@@ -21,22 +21,22 @@ Detailed description of data:
 - Med-photos: medium sized photos of 1 cat in URL mode
 
 
-### *Project Progress*
+### **Project Progress**
 ---
 We utilized PCA to do the following: 
 - To perform feature extraction which helps reduce the training data
 - To recreate the cat images
 
-### *Model*
+### **Model**
 ---
 Utilized Support Vector Machine (SVM) and Convolutional Neural Netowrk (CNN). We received an evaulation of 84% accuracy rate for 3 breeds: bombay, siamese, and tabby. 
 
-### *Cat Breed Image Classification in Action**
+### **Cat Breed Image Classification in Action**
 ---
 We used Streamlit to create a website application. We utilized pickle library to create a pickle file for our model. We then implemented our model on a file uploader that the user will use, to upload an image of cats. 
 
 
-### *RESOURCES:*
+### **RESOURCES:**
 ---
 1. Tensorflow/Keras: 
   - Installing Tensorflow: https://www.tensorflow.org/install/pip
